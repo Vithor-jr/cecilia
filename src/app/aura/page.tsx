@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 
 import phone from '../../assets/nexus/phone.png'
 import aura_1 from '../../assets/Aura/aura_1.1.png'
-import main from '../../assets/aura/main.png'
+import main from '../../assets/Aura/main.png'
 import cont1 from '../../assets/Aura/cont1.png'
 import aura2_1 from '../../assets/Aura/aura_2,1,png.png'
 import aura2_2 from '../../assets/Aura/aura_2.2.png'
