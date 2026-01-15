@@ -5,141 +5,77 @@ import Profile from "@/components/Profile"
 import { LettersAnimation } from "@/function/letters"
 import { motion } from "framer-motion"
 import Image from "next/image"
-
+import ceciliaMain from '../../../public/cecilia/cecilia.svg'
+import ExperienceSection from "../Experience"
 //Fazer menu como drawer
 
 export default function AboutSection() {
   return (
-    <section id="sobre" className="pr-10 pl-10 rounded-[20px] items-center bg-[#574FE4] relative w-full flex-col text-black flex">
-       
-       <div className="flex w-full flex-row items-center flex-wrap justify-center mt-10 gap-10">
+    <section id="sobre" className="text-[#F0F0F0] ">
+      <div className="flex pt-20 px-10 gap-y-10 flex-row items-center flex-wrap gap-x-[8vw] justify-center">
+        <div className={`${inter.className} max-w-[530px] font-light text-[14px]`}>
+          <h1 className="text-[55px] font-bold">Sobre mim</h1>
+          <p className="mt-4">Olá, me chamo cecília e desde cedo, encontrei na arte uma forma de me entender e me expressar. O design entrou na minha vida como um caminho para transformar essa sensibilidade em algo funcional, ideias que ganham forma e impacto.</p>
+          <p className="mt-4">Sou formada pela Fundação Matias Machline e hoje curso Design na UFG. Ao longo da minha trajetória, participei de projetos de UX/UI, branding, social media e design estratégico, aprendendo sobre experiência do usuário, propósito e colaboração.</p>
+          <p className="mt-7">Atualmente, sou sócia da Nexus Skill, um app voltado ao aprimoramento de soft skills, e da NXS Hub, empresa de desenvolvimento de softwares.</p>
+          <p className="mt-7">Acredito no design como ferramenta de transformação, uma ponte entre pessoas, tecnologia e novas possibilidades. Sigo curiosa, inquieta e comprometida com o que ainda posso criar.</p>
 
-          <Profile/>
-
-          <div className="flex flex-col items-start gap-7 flex-1">
-            <div className="flex flex-row relative">
-              <div className='text-white bg-[#574FE4] pl-6 rotate-[-3deg] pr-6 text-[13px] absolute -right-10 -bottom-0 border-white border-2 rounded-3xl'>
-                <h1>Sobre mim</h1>
+          <div className="flex flex-row mt-10 flex-wrap gap-4">
+            <a className={`flex flex-row gap-2 items-center px-6 py-2 font-semibold text-[14px] rounded-4xl text-[#574FE4] bg-[#D5D3FF]`}>
+             <div className="rounded-full bg-[#574FE4] w-6 h-6 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M14 14H11.2V9.10068C11.2 7.75668 10.6071 7.00684 9.5438 7.00684C8.3867 7.00684 7.7 7.78818 7.7 9.10068V14H4.9V4.9H7.7V5.92334C7.7 5.92334 8.57849 4.38184 10.5581 4.38184C12.5384 4.38184 14 5.59027 14 8.09067V14ZM1.7094 3.44463C0.765101 3.44463 0 2.67327 0 1.72197C0 0.771373 0.765101 0 1.7094 0C2.653 0 3.4181 0.771373 3.4181 1.72197C3.4188 2.67327 2.653 3.44463 1.7094 3.44463ZM0 14H3.5V4.9H0V14Z" fill="#D5D3FF"/>
+                </svg>
               </div>
-
-              <h1 className={`${inter.className} 
-              font-bold text-white
-              min-[1140px]:text-[90px] min-[1140px]:leading-[90px] 
-              text-[60px] leading-[60px]
-              `}>Sobre</h1>
-            </div>
-            <p className={`${inter.className} text-white font-medium 
-              min-[1140px]:text-[22px] text-[18px]`}>
-              Desde cedo, encontrei na arte minha forma de expressão e, no design e na tecnologia, uma maneira de transformar criatividade em soluções reais. Formada pela Fundação Matias Machline, desenvolvi projetos como o studUs e atuei em UX/UI e Social Media, aprendendo sobre experiência do usuário e trabalho em equipe. Hoje, curso Design na UFG e atuo como sócia na startup Nexus Skill, um app para aprimoramento de softskills. Acredito no design como ferramenta de transformação e sigo curiosa e comprometida com o que ainda posso criar.
-            </p>
-          </div>
-       </div>
-
-       <div className="flex flex-row mt-4 mb-20 gap-2 items-center flex-wrap justify-center">
-          <div className="bg-white relative pb-5 mt-10 w-[90vw] flex max-w-[400px] min-h-[273px] pt-10 flex-col items-center rounded-[20px]">
-            <div className={`${inter.className} font-semibold absolute -top-4 rotate-2 text-[14px] px-10 py-3 rounded-4xl bg-[#9FDE8D]`}>
-              <p className="text-[#49830A]">Educação</p>
-            </div>
+              Cecília costa
+            </a>
             
-            <svg className="w-[25px] h-[25px]" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
-              <path 
-                d="M17.9455 3.73687C18.2108 3.8496 18.2108 4.03418 17.9455 4.14581L9.98322 7.52571C9.67106 7.6383 9.32938 7.6383 9.01722 7.52571L1.0549 4.14692C0.789641 4.03418 0.789641 3.8485 1.0549 3.73687L9.01722 0.356973C9.32936 0.24429 9.67108 0.24429 9.98322 0.356973L17.9455 3.73687ZM10.3933 8.49282L14.7955 6.62492V8.92497C14.7955 10.4657 12.4247 11.7147 9.50022 11.7147C6.57569 11.7147 4.20601 10.4657 4.20601 8.92497V6.62382L8.60717 8.49171C9.18152 8.71545 9.81893 8.71545 10.3933 8.49171V8.49282ZM15.8533 10.3463H17.6681V9.1405C17.6724 9.0186 17.652 8.89709 17.6083 8.78321C17.5646 8.66934 17.4984 8.56543 17.4137 8.47769C17.3289 8.38995 17.2274 8.32017 17.1151 8.27251C17.0028 8.22485 16.8821 8.20029 16.7601 8.20029C16.6382 8.20029 16.5174 8.22485 16.4052 8.27251C16.2929 8.32017 16.1913 8.38995 16.1066 8.47769C16.0219 8.56543 15.9557 8.66934 15.912 8.78321C15.8683 8.89709 15.8479 9.0186 15.8522 9.1405L15.8533 10.3463ZM16.7596 6.36408C16.8807 6.3643 16.9992 6.32857 17.1001 6.26142C17.2009 6.19427 17.2796 6.09872 17.3261 5.98685C17.3726 5.87499 17.3849 5.75183 17.3614 5.63298C17.3379 5.51413 17.2796 5.40493 17.1941 5.31918C17.1085 5.23344 16.9994 5.17501 16.8806 5.15129C16.7618 5.12758 16.6386 5.13964 16.5266 5.18595C16.4147 5.23226 16.319 5.31074 16.2516 5.41146C16.1843 5.51218 16.1484 5.63061 16.1484 5.75176C16.1484 5.91416 16.2129 6.0699 16.3277 6.18474C16.4426 6.29957 16.5983 6.36408 16.7607 6.36408H16.7596ZM16.7596 7.92802C16.8807 7.92824 16.9991 7.89255 17.1 7.82545C17.2008 7.75835 17.2794 7.66286 17.326 7.55105C17.3725 7.43925 17.3849 7.31616 17.3615 7.19734C17.338 7.07852 17.2799 6.96931 17.1944 6.88352C17.109 6.79773 17 6.73922 16.8812 6.71538C16.7625 6.69154 16.6394 6.70344 16.5274 6.74958C16.4154 6.79572 16.3197 6.87403 16.2522 6.97461C16.1847 7.07518 16.1486 7.1935 16.1484 7.3146C16.1482 7.39511 16.164 7.47485 16.1947 7.54927C16.2254 7.62368 16.2705 7.69132 16.3273 7.74829C16.3842 7.80527 16.4518 7.85047 16.5261 7.88131C16.6005 7.91215 16.6802 7.92802 16.7607 7.92802H16.7596Z" 
-                fill="#6D6D6D"
-              />
-            </svg>
-           
-            <p className={`text-[#6D6D6D] ${poppins.className} text-[20px] font-bold text-center`}>Fundação Matias Machline</p>
-            <h1 className={`${poppins.className} text-center`}>
-              <span className="font-medium text-[12px] text-[#B5B5B5]">2022 | 2024 </span>
-              <span className="font-medium text-[14px] text-[#858585]">Técnica em informática</span>
-            </h1>
-
-            <svg className="mt-10 w-[25px] h-[25px]" xmlns="http://www.w3.org/2000/svg" width="19" height="12" viewBox="0 0 19 12" fill="none">
-              <path 
-                d="M17.9455 3.73687C18.2108 3.8496 18.2108 4.03418 17.9455 4.14581L9.98322 7.52571C9.67106 7.6383 9.32938 7.6383 9.01722 7.52571L1.0549 4.14692C0.789641 4.03418 0.789641 3.8485 1.0549 3.73687L9.01722 0.356973C9.32936 0.24429 9.67108 0.24429 9.98322 0.356973L17.9455 3.73687ZM10.3933 8.49282L14.7955 6.62492V8.92497C14.7955 10.4657 12.4247 11.7147 9.50022 11.7147C6.57569 11.7147 4.20601 10.4657 4.20601 8.92497V6.62382L8.60717 8.49171C9.18152 8.71545 9.81893 8.71545 10.3933 8.49171V8.49282ZM15.8533 10.3463H17.6681V9.1405C17.6724 9.0186 17.652 8.89709 17.6083 8.78321C17.5646 8.66934 17.4984 8.56543 17.4137 8.47769C17.3289 8.38995 17.2274 8.32017 17.1151 8.27251C17.0028 8.22485 16.8821 8.20029 16.7601 8.20029C16.6382 8.20029 16.5174 8.22485 16.4052 8.27251C16.2929 8.32017 16.1913 8.38995 16.1066 8.47769C16.0219 8.56543 15.9557 8.66934 15.912 8.78321C15.8683 8.89709 15.8479 9.0186 15.8522 9.1405L15.8533 10.3463ZM16.7596 6.36408C16.8807 6.3643 16.9992 6.32857 17.1001 6.26142C17.2009 6.19427 17.2796 6.09872 17.3261 5.98685C17.3726 5.87499 17.3849 5.75183 17.3614 5.63298C17.3379 5.51413 17.2796 5.40493 17.1941 5.31918C17.1085 5.23344 16.9994 5.17501 16.8806 5.15129C16.7618 5.12758 16.6386 5.13964 16.5266 5.18595C16.4147 5.23226 16.319 5.31074 16.2516 5.41146C16.1843 5.51218 16.1484 5.63061 16.1484 5.75176C16.1484 5.91416 16.2129 6.0699 16.3277 6.18474C16.4426 6.29957 16.5983 6.36408 16.7607 6.36408H16.7596ZM16.7596 7.92802C16.8807 7.92824 16.9991 7.89255 17.1 7.82545C17.2008 7.75835 17.2794 7.66286 17.326 7.55105C17.3725 7.43925 17.3849 7.31616 17.3615 7.19734C17.338 7.07852 17.2799 6.96931 17.1944 6.88352C17.109 6.79773 17 6.73922 16.8812 6.71538C16.7625 6.69154 16.6394 6.70344 16.5274 6.74958C16.4154 6.79572 16.3197 6.87403 16.2522 6.97461C16.1847 7.07518 16.1486 7.1935 16.1484 7.3146C16.1482 7.39511 16.164 7.47485 16.1947 7.54927C16.2254 7.62368 16.2705 7.69132 16.3273 7.74829C16.3842 7.80527 16.4518 7.85047 16.5261 7.88131C16.6005 7.91215 16.6802 7.92802 16.7607 7.92802H16.7596Z" 
-                fill="#6D6D6D"
-              />
-            </svg>
-
-            <p className={`text-[#6D6D6D] ${poppins.className} text-[20px] font-bold text-center`}>Universidade federal de Goías</p>
-            <h1 className={`${poppins.className} text-center`}>
-              <span className="font-medium text-[12px] text-[#B5B5B5]">2025 | 2028 </span>
-              <span className="font-medium text-[14px] text-[#858585]">Design</span>
-            </h1>
-          </div>
-
-          <div className="bg-white relative mt-10 w-[90vw] flex max-w-[400px] min-h-[273px] pt-8 flex-col items-center rounded-[20px]">
-              <div className={`${inter.className} font-semibold absolute -top-4 -rotate-8 text-[14px] px-10 py-3 rounded-4xl bg-[#EBC09C]`}>
-                <p className="text-[#C35C08]">Softskills</p>
+            <a className={`flex flex-row gap-2 items-center px-6 py-2 font-semibold text-[14px] rounded-4xl text-[#574FE4] bg-[#D5D3FF]`}>
+              <div className="rounded-full bg-[#574FE4] w-6 h-6 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path d="M13.1211 1.34181V8.946C13.1211 9.43994 12.7207 9.84069 12.2268 9.84069H10.1386V4.77138L6.56031 7.45588L2.982 4.77138V9.84113H0.89425C0.400313 9.84113 0 9.44081 0 8.94688V1.34225C0 0.601125 0.600688 0 1.34181 0C1.64544 0 1.92544 0.101062 2.15031 0.270813L2.14681 0.268187L6.56031 3.57875L10.9738 0.268187C11.1952 0.100625 11.4752 0 11.7788 0C12.5199 0 13.1211 0.600688 13.1211 1.34181Z" fill="#D5D3FF"/>
+                </svg>
               </div>
+              @ceciliadsgr@gmail.com
+            </a>
 
-              <div className={`${poppins.className} text-[12px] mb-5 items-center justify-center px-5 gap-3 mt-4 font-medium flex flex-row flex-wrap`}>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Comunicação</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Trabalho em equipe</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Empatia</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Resolução de problemas</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Gestão de tempo</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Visão estratégica</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center">Resiliência</p>
-                <p className="text-[#8B8B8B] bg-[#EEEEEE] w-[170px] py-3 rounded-3xl text-center ">Pensamento crítico</p>
+            <a className={`flex flex-row gap-2 items-center px-4 py-2 font-semibold text-[14px] rounded-4xl text-[#574FE4] bg-[#D5D3FF]`}>
+              <div className="rounded-full bg-[#574FE4] w-6 h-6 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M6.49357 9.99239C8.425 9.99239 9.99075 8.42665 9.99075 6.49522C9.99075 4.56378 8.425 2.99805 6.49357 2.99805C4.56214 2.99805 2.9964 4.56378 2.9964 6.49522C2.9964 8.42665 4.56214 9.99239 6.49357 9.99239ZM6.49357 8.82667C7.78117 8.82667 8.82502 7.78282 8.82502 6.49522C8.82502 5.2076 7.78117 4.16377 6.49357 4.16377C5.20595 4.16377 4.16212 5.2076 4.16212 6.49522C4.16212 7.78282 5.20595 8.82667 6.49357 8.82667Z" fill="#D5D3FF"/>
+                  <path d="M9.95288 2.65186C9.74063 2.65186 9.56857 2.82392 9.56857 3.03616C9.56857 3.2484 9.74063 3.42047 9.95288 3.42047C10.1651 3.42047 10.3372 3.2484 10.3372 3.03616C10.3372 2.82392 10.1651 2.65186 9.95288 2.65186Z" fill="#D5D3FF"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M0.386119 1.93429C0 2.69209 0 3.68411 0 5.66815V7.32136C0 9.30538 0 10.2974 0.386119 11.0552C0.725759 11.7218 1.2677 12.2637 1.93429 12.6034C2.69209 12.9895 3.68411 12.9895 5.66815 12.9895H7.32136C9.30538 12.9895 10.2974 12.9895 11.0552 12.6034C11.7218 12.2637 12.2637 11.7218 12.6034 11.0552C12.9895 10.2974 12.9895 9.30538 12.9895 7.32136V5.66815C12.9895 3.68411 12.9895 2.69209 12.6034 1.93429C12.2637 1.2677 11.7218 0.725759 11.0552 0.386119C10.2974 0 9.30538 0 7.32136 0H5.66815C3.68411 0 2.69209 0 1.93429 0.386119C1.2677 0.725759 0.725759 1.2677 0.386119 1.93429ZM7.32136 1.18086H5.66815C4.65664 1.18086 3.96903 1.18178 3.43754 1.22521C2.91983 1.2675 2.65508 1.34417 2.47039 1.43827C2.026 1.66471 1.66471 2.026 1.43827 2.47039C1.34417 2.65508 1.2675 2.91983 1.22521 3.43754C1.18178 3.96903 1.18086 4.65664 1.18086 5.66815V7.32136C1.18086 8.33288 1.18178 9.02044 1.22521 9.55195C1.2675 10.0697 1.34417 10.3344 1.43827 10.5191C1.66471 10.9635 2.026 11.3248 2.47039 11.5512C2.65508 11.6453 2.91983 11.722 3.43754 11.7643C3.96903 11.8077 4.65664 11.8086 5.66815 11.8086H7.32136C8.33288 11.8086 9.02044 11.8077 9.55195 11.7643C10.0697 11.722 10.3344 11.6453 10.5191 11.5512C10.9635 11.3248 11.3248 10.9635 11.5512 10.5191C11.6453 10.3344 11.722 10.0697 11.7643 9.55195C11.8077 9.02044 11.8086 8.33288 11.8086 7.32136V5.66815C11.8086 4.65664 11.8077 3.96903 11.7643 3.43754C11.722 2.91983 11.6453 2.65508 11.5512 2.47039C11.3248 2.026 10.9635 1.66471 10.5191 1.43827C10.3344 1.34417 10.0697 1.2675 9.55195 1.22521C9.02044 1.18178 8.33288 1.18086 7.32136 1.18086Z" fill="#D5D3FF"/>
+                </svg>
               </div>
+              @ceciliadesignn
+            </a>
           </div>
+        </div>
 
-          <div className="relative flex mt-10 max-w-[400px] w-[90vw] gap-2 px-5 min-h-[273px] pt-12 flex-col items-center rounded-[20px]">
-                <div className={`${inter.className} font-semibold absolute -top-4 -rotate-4 text-[14px] px-10 py-3 rounded-4xl bg-[#D5D3FF]`}>
-                  <p className="text-[#574FE4]">Hardskills</p>
-                </div>
+        <div className="relative flex md:flex-row flex-col items-center">
 
-                <div className="w-full justify-center items-center flex flex-row gap-2">
-                  <Image
-                    src="/photoshop.svg"
-                    width={43}
-                    height={43}
-                    alt="Photoshop"
-                  />
-                  <div className="flex-1 h-3 rounded-2xl bg-[rgba(0,0,0,0.15)]">
-                    <div className="bg-[#001E36]  rounded-2xl h-3 w-[90%]"/>
-                  </div>
-                </div>
+          <Image
+            src={ceciliaMain}
+            alt="ceci"
+            className="w-[514px] h-max-[641px] md:mb-0 mb-10"
+          />
 
-                <div className="w-full justify-center items-center flex flex-row gap-2">
-                  <Image
-                    src="/ai.svg"
-                    width={43}
-                    height={43}
-                    alt="Ai"
-                  />
-                  <div className="flex-1 h-3 rounded-2xl bg-[rgba(0,0,0,0.15)]">
-                    <div className="bg-[#320000]  rounded-2xl h-3 w-[90%]"/>
-                  </div>
-                </div>
+          <p className="w-[250px] md:mt-0 mt-5 md:-rotate-10 -left-20 top-30 rounded-full flex justify-center py-5 md:absolute bg-[#92D1E0] text-[#1D8198] font-semibold text-[14px]">Web designer</p>
+          <p className="w-[250px] md:mt-0 mt-5 md:rotate-5 -left-20 bottom-20 rounded-full flex justify-center py-5 md:absolute bg-[#EBC09C] text-[#C35C08] font-semibold text-[14px]">Brand designer</p>
+          <p className="w-[250px] md:mt-0 mt-5 md:-rotate-5 -right-10 -bottom-5 rounded-full flex justify-center py-5 md:absolute bg-[#9FDE8D] text-[#49830A] font-semibold text-[14px]">UX/UI designer</p>
+        </div>
+      </div>
 
-                 <div className="w-full justify-center items-center flex flex-row gap-2">
-                  <Image
-                    src="/figma.svg"
-                    width={43}
-                    height={43}
-                    alt="Figam"
-                  />
-                  <div className="flex-1 h-3 rounded-2xl bg-[rgba(0,0,0,0.15)]">
-                    <div className="bg-[#03011C]  rounded-2xl h-3 w-[90%]"/>
-                  </div>
-                </div>
+      <div className={`font-semibold mt-16 text-[13px] gap-x-10 overflow-hidden flex items-center justify-around bg-[#574FE4] -rotate-2 py-2`}>
+        <p>Brand designer</p>
+        <p>Graphic designer</p>
+        <p>Marketing</p>
+        <p>Brand designer</p>
+        <p>Graphic designer</p>
+        <p>Marketing</p>
+      </div>
 
-                 <div className="w-full justify-center items-center flex flex-row gap-2">
-                  <Image
-                    src="/canva.svg"
-                    width={43}
-                    height={43}
-                    alt="Canva"
-                  />
-                  <div className="flex-1 h-3 rounded-2xl bg-[rgba(0,0,0,0.15)]">
-                    <div className="bg-[#02C2CD]  rounded-2xl h-3 w-[90%]"/>
-                  </div>
-                </div>
-          </div>
-       </div>
-
+      <ExperienceSection/>
     </section>
   )
 }

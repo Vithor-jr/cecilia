@@ -26,7 +26,7 @@ export function ActiveProvider({ children }: { children: React.ReactNode }) {
           }
         })
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     )
 
     sections.forEach((section) => observer.observe(section))

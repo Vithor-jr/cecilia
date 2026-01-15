@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function Footer() {
 	return(
-		<footer className="w-full pb-15 gap-5 pt-20 -mt-10 sm:pt-30 sm:-mt-15 sm:flex-row px-10 flex-col flex justify-between items-start bg-[#574FE4] text-white text-[14px]">
+		<footer className="max-w-[1400px] w-full mt-10 rounded-[30px] pt-18 pb-6 gap-5 sm:flex-row px-10 flex-col flex justify-between items-start bg-[#101010] text-white text-[14px]">
 			<div className="sm:max-w-[350px] flex flex-col gap-3">
 				<svg xmlns="http://www.w3.org/2000/svg" width="100" height="29" viewBox="0 0 110 29" fill="none">
 					<motion.path 

@@ -9,7 +9,7 @@ import { useActive } from "@/contexts/active_provider";
 const links = [
     { id: "home", label: "Home", delay: 1.6 },
     { id: "sobre", label: "Sobre", delay: 1.8 },
-    { id: "experiencia", label: "Serviços", delay: 2.0 },
+    { id: "servicos", label: "Serviços", delay: 2.0 },
     { id: "projetos", label: "Projetos", delay: 2.2 },
     { id: "contato", label: "Contato", delay: 2.4 },
 ]

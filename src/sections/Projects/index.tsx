@@ -68,6 +68,7 @@ const cards = [
 
 export default function ProjectSection() {
   const [active, setActive] = useState("visual")
+  const [input, setInput] = useState("");
 
   const filteredCards = cards.filter((item) => {
     if (active === "all") return true
