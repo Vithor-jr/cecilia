@@ -11,14 +11,14 @@ import ExperienceSection from "../Experience"
 
 export default function AboutSection() {
   return (
-    <section id="sobre" className="text-[#F0F0F0] ">
-      <div className="flex pt-20 px-10 gap-y-10 flex-row items-center flex-wrap gap-x-[8vw] justify-center">
-        <div className={`${inter.className} max-w-[530px] font-light text-[14px]`}>
-          <h1 className="text-[55px] font-bold">Sobre mim</h1>
-          <p className="mt-4">Olá, me chamo cecília e desde cedo, encontrei na arte uma forma de me entender e me expressar. O design entrou na minha vida como um caminho para transformar essa sensibilidade em algo funcional, ideias que ganham forma e impacto.</p>
-          <p className="mt-4">Sou formada pela Fundação Matias Machline e hoje curso Design na UFG. Ao longo da minha trajetória, participei de projetos de UX/UI, branding, social media e design estratégico, aprendendo sobre experiência do usuário, propósito e colaboração.</p>
-          <p className="mt-7">Atualmente, sou sócia da Nexus Skill, um app voltado ao aprimoramento de soft skills, e da NXS Hub, empresa de desenvolvimento de softwares.</p>
-          <p className="mt-7">Acredito no design como ferramenta de transformação, uma ponte entre pessoas, tecnologia e novas possibilidades. Sigo curiosa, inquieta e comprometida com o que ainda posso criar.</p>
+    <section id="sobre" className="text-[#F0F0F0] flex flex-col items-center">
+      <div className="flex pt-20 max-w-[1440px] px-10 gap-y-10 flex-row items-center  gap-x-[8vw] justify-center">
+        <div className={`${inter.className} w-[clamp(0px,100%,530px)] font-light `}>
+          <h1 className="font-bold text-[clamp(40px,10vw,64px)]">Sobre mim</h1>
+          <p className="text-[clamp(14px,10vw,16px)] mt-4">Olá, me chamo cecília e desde cedo, encontrei na arte uma forma de me entender e me expressar. O design entrou na minha vida como um caminho para transformar essa sensibilidade em algo funcional, ideias que ganham forma e impacto.</p>
+          <p className="text-[clamp(14px,10vw,16px)] mt-4">Sou formada pela Fundação Matias Machline e hoje curso Design na UFG. Ao longo da minha trajetória, participei de projetos de UX/UI, branding, social media e design estratégico, aprendendo sobre experiência do usuário, propósito e colaboração.</p>
+          <p className="text-[clamp(14px,10vw,16px)] mt-7">Atualmente, sou sócia da Nexus Skill, um app voltado ao aprimoramento de soft skills, e da NXS Hub, empresa de desenvolvimento de softwares.</p>
+          <p className="text-[clamp(14px,10vw,16px)] mt-7">Acredito no design como ferramenta de transformação, uma ponte entre pessoas, tecnologia e novas possibilidades. Sigo curiosa, inquieta e comprometida com o que ainda posso criar.</p>
 
           <div className="flex flex-row mt-10 flex-wrap gap-4">
             <a className={`flex flex-row gap-2 items-center px-6 py-2 font-semibold text-[14px] rounded-4xl text-[#574FE4] bg-[#D5D3FF]`}>
@@ -57,16 +57,16 @@ export default function AboutSection() {
           <Image
             src={ceciliaMain}
             alt="ceci"
-            className="w-[514px] h-max-[641px] md:mb-0 mb-10"
+            className="h-max-[641px] w-[clamp(0px,100%,514px)] md:mb-0 mb-10"
           />
 
-          <p className="w-[250px] md:mt-0 mt-5 md:-rotate-10 -left-20 top-30 rounded-full flex justify-center py-5 md:absolute bg-[#92D1E0] text-[#1D8198] font-semibold text-[14px]">Web designer</p>
+          <p className="w-[clamp(150px,25vw,250px)] md:mt-0 mt-5 md:-rotate-10 -left-20 top-30 rounded-full flex justify-center py-5 md:absolute bg-[#92D1E0] text-[#1D8198] font-semibold text-[14px]">Web designer</p>
           <p className="w-[250px] md:mt-0 mt-5 md:rotate-5 -left-20 bottom-20 rounded-full flex justify-center py-5 md:absolute bg-[#EBC09C] text-[#C35C08] font-semibold text-[14px]">Brand designer</p>
           <p className="w-[250px] md:mt-0 mt-5 md:-rotate-5 -right-10 -bottom-5 rounded-full flex justify-center py-5 md:absolute bg-[#9FDE8D] text-[#49830A] font-semibold text-[14px]">UX/UI designer</p>
         </div>
       </div>
 
-      <div className={`font-semibold mt-16 text-[13px] gap-x-10 overflow-hidden flex items-center justify-around bg-[#574FE4] -rotate-2 py-2`}>
+      <div className={`font-semibold mt-16 w-full text-[13px] gap-x-10 overflow-hidden flex items-center justify-around bg-[#574FE4] -rotate-2 py-2`}>
         <p>Brand designer</p>
         <p>Graphic designer</p>
         <p>Marketing</p>

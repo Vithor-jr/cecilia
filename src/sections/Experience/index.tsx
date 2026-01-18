@@ -48,7 +48,7 @@ const prof = [
 
 export default function ExperienceSection() {
   return (
-    <div className={`${inter.className} gap-y-10 mt-24 pb-30 px-10 flex flex-row flex-wrap justify-center gap-x-[20px]`}>
+    <div className={`${inter.className} max-w-[ max-w-[1440px] gap-y-10 mt-24 pb-30 px-10 flex flex-row flex-wrap justify-center gap-x-[20px]`}>
       <div className="flex w-[400px] gap-5">
         <div className="w-2 h-full rounded-full bg-[#574FE4]"/>
 

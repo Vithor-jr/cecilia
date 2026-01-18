@@ -22,16 +22,18 @@ export default function Home() {
     }, [headerActive, setHeaderActive])
   
   return (
-    <div className="bg-[#F0F0F0] overflow-hidden">
+    <div className="bg-[#F0F0F0]">
        <main className="flex items-center flex-col">
            <HomeSection />
-           <div className="mr-[30px] ml-[30px] rounded-[20px] bg-[#101010] w-[calc(100%-60px)]">
+           <div className="mr-[30px] ml-[30px]  max-w-[1440px]  rounded-[20px] bg-[#101010] w-[calc(100%-60px)]">
               <AboutSection />
            </div>
            <ServicesSection/>
            <ProjectSection />
            <Results/>
-           <ContactSection/>
+           <div className="w-full overflow-hidden">
+            <ContactSection/>
+           </div>
         </main>
     </div>
   )

@@ -10,8 +10,8 @@ import Image from "next/image"
 
 export default function ServicesSection() {
 	return (
-		<section id="servicos"  className="w-full py-20 px-[30px]">
-			<div className="flex gap-y-10 flex-col	xl:flex-row justify-between flex-wrap">
+		<section id="servicos"  className="w-full flex items-center flex-col py-20 px-[30px]">
+			<div className="flex gap-y-10 flex-col max-w-[1440px]	xl:flex-row justify-between flex-wrap">
 				<div className="flex gap-y-10 flex-col justify-between flex-1 items-start">
 				<div className="flex flex-row flex-wrap">
 					<h1 className={`${inter.className} leading-[58px] font-bold text-[45px]`}>Vamos construir</h1>
@@ -130,7 +130,7 @@ export default function ServicesSection() {
 				</div>
 			</div>
 
-			<div className={`${inter.className} justify-between w-full flex flex-wrap flex-row mt-20 px-10 py-18 bg-[#101010] rounded-[30px] text-white`}>
+			<div className={`${inter.className}  max-w-[1440px] justify-between w-full flex flex-wrap flex-row mt-20 px-10 py-18 bg-[#101010] rounded-[30px] text-white`}>
 				<div className="flex flex-col min-h-[471px] max-w-[460px]">
 					<div className="flex flex-row items-center gap-2">
 						<p className={`font-bold text-[42px]`}>Diferenciais</p>

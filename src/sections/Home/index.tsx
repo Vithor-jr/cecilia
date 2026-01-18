@@ -8,7 +8,7 @@ import Image from "next/image"
 
 export default function HomeSection() {
   return (
-    <section id="home" className="min-h-[650px] mt-20 p-[30px] gap-10 flex-wrap relative w-full flex-row text-black flex items-center justify-between">
+    <section id="home" className="h-[650px] max-w-[1440px] mt-20 p-[30px] gap-10 flex-wrap relative w-full flex-row text-black flex items-center justify-between">
       <div className="flex flex-col relative">
           <p className={`${inter.className} font-semibold text-[20px] text-[#A2A2A2]`}>Hey, eu sou</p>
           <motion.p  
@@ -20,12 +20,12 @@ export default function HomeSection() {
               damping: 12, 
               delay:0.2
             }}    
-            className={`text-left ${inter.className} -mt-3 md:-mt-5 font-bold text-[50px] md:text-[96px]`}>
+            className={`text-left ${inter.className} -mt-3 md:-mt-5 font-bold text-[clamp(50px,10vw,96px)]`}>
               Branding
           </motion.p>
-          <p className={`text-left -mt-4 md:-mt-12 ${inter.className} font-bold text-[50px] md:text-[96px]`}>& interface</p>
-          <p className={`text-left -mt-4 text-white md:-mt-12 ${inter.className} font-bold z-2 text-[50px] md:text-[96px]`}>designer</p>
-          <div className="bg-[#574FE4] absolute -left-2 bottom-3 -rotate-2 z-1 w-[230px] h-[50px] md:w-[450px] md:h-[100px] rounded-3xl"/>
+          <p className={`text-left -mt-4 md:-mt-12 ${inter.className} font-bold text-[clamp(50px,10vw,96px)]`}>& interface</p>
+          <p className={`text-left -mt-4 text-white md:-mt-12 ${inter.className} font-bold z-2 text-[clamp(50px,10vw,96px)]`}>designer</p>
+          <div className="bg-[#574FE4] absolute -left-2 bottom-3 -rotate-2 z-1 w-[clamp(230px,50vw,450px)] h-[clamp(50px,10vw,96px)] rounded-3xl"/>
       </div>
 
       <div className="mr-7">

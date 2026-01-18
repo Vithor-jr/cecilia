@@ -31,7 +31,7 @@ export function ActiveProvider({ children }: { children: React.ReactNode }) {
 
     sections.forEach((section) => observer.observe(section))
     return () => sections.forEach((section) => observer.unobserve(section))
-  }, [])
+  }, [active])
 
   return (
     <ActiveContext.Provider value={{ active, setActive, headerActive, setHeaderActive }}>

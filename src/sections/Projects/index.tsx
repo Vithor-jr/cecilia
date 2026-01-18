@@ -36,7 +36,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Dispositivo interativo para aprendizado e prática do xadrez.",
     img: magnnuz,
-    href:"/nexus",
+    href:"/magnnuz",
     tec: ["figma", "ai", "photoshop"]
   },
   { 
@@ -44,7 +44,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Empresa de transporte de cargas secas com foco em confiança e profissionalismo.",
     img: veeg,
-    href:"/nexus",
+    href:"/veeg",
     tec: ["figma", "ai", "photoshop"]
   },
 
@@ -124,7 +124,7 @@ export default function ProjectSection() {
         }
       </div>
 
-      <div className="flex mt-10 flex-row flex-wrap w-[90vw] max-w-[1100px] items-center justify-center">
+      <div className="flex mt-10 flex-row flex-wrap max-w-[1400px] items-center justify-center">
         {
           filteredCards.map((item, index) => (
             <Projeto

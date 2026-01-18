@@ -18,8 +18,8 @@ export default function Header() {
 	const [menuShown, setMenuShown] = useState(false)
 	const { active, setActive, headerActive } = useActive()
 	return (
-		<div className="w-full bg-[#F0F0F0] fixed z-10">
-			<header className="w-full flex flex-row py-5 pr-10 pl-10 justify-between items-center">
+		<div className="w-full bg-[#F0F0F0] justify-center flex fixed z-99">
+			<header className="w-full  max-w-[1440px] flex flex-row py-5 pr-10 pl-10 justify-between items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="100" height="29" viewBox="0 0 110 29" fill="none">
 					<motion.path 
 						initial={{y:-100}}

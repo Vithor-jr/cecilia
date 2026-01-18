@@ -27,6 +27,9 @@ export default function Header({title, type, description}: {title: string, type:
 			<div className="flex flex-wrap flex-col sm:gap-5 sm:flex-row sm:items-center items-start">
 				<h1 className={`${inter.className} text-[40px] md:text-[60px] font-bold`}>{title}</h1>
 			  <p className={`${inter.className} text-[#1D8198] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#92D1E0]`}>{type}</p>
+				{
+					title == "VEEG" && <p className={`${inter.className} text-[#1D8198] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#92D1E0]`}>Primeiro projeto</p>
+				}
 			</div>
 			<p className={`${inter.className} text-[20px] md:text-[30px] font-medium text-[#828282] `}>{description}</p>
 		</header>

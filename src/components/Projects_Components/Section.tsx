@@ -13,15 +13,15 @@ export default function Section({ title, Icon, isNexusThird=false, number, descr
   return (
     <motion.div 
 			initial={{opacity:0, x:-100}}
-			whileInView={{opacity:1, x:0}}
+			animate={{opacity:1, x:0}}
 			transition={{duration:1, delay:0.2*number, type:'spring'}}
 			className="bg-[#E7E6F4] px-10 pt-10 flex-1 flex flex-col pb-15 rounded-2xl">
-      <div className="flex items-center flex-row justify-between">
+      <div className="flex items-center gap-x-5  flex-row justify-between">
 				<div className="bg-[#D5D3FF] flex px-5 py-1 rounded-2xl items-center gap-2">
 					<Icon className="w-[25px] h-[25px] text-[#574FE4]" />
 					<h1 className={ `${inter.className} text-[#574FE4] text-[20px] md:text-[30px] font-bold`}>{title}</h1>
 				</div>
-				<p className={ `${inter.className} bg-[#D5D3FF] w-[30px] text-center py-1 rounded-full text-[#574FE4] text-[14px] font-bold`}>{number}</p>
+				<p className={ `${inter.className} bg-[#D5D3FF] w-[30px] h-[30px] text-center py-1 rounded-full text-[#574FE4] text-[14px] font-bold`}>{number}</p>
 			</div>
 
 		{

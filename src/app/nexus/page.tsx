@@ -63,8 +63,8 @@ export default function NexusPage() {
 						Icon={() => (
 							<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
 								<g clipPath="url(#clip0_3891_3590)">
-									<path d="M18.6878 6.70817C20.011 6.70817 21.0837 5.63552 21.0837 4.31234C21.0837 2.98915 20.011 1.9165 18.6878 1.9165C17.3646 1.9165 16.292 2.98915 16.292 4.31234C16.292 5.63552 17.3646 6.70817 18.6878 6.70817Z" fill="#E7E6F4" stroke="#574FE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M4.31283 21.0832C5.63601 21.0832 6.70866 20.0105 6.70866 18.6873C6.70866 17.3642 5.63601 16.2915 4.31283 16.2915C2.98964 16.2915 1.91699 17.3642 1.91699 18.6873C1.91699 20.0105 2.98964 21.0832 4.31283 21.0832Z" fill="#E7E6F4" stroke="#574FE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M18.6878 6.70817C20.011 6.70817 21.0837 5.63552 21.0837 4.31234C21.0837 2.98915 20.011 1.9165 18.6878 1.9165C17.3646 1.9165 16.292 2.98915 16.292 4.31234C16.292 5.63552 17.3646 6.70817 18.6878 6.70817Z" fill="#E7E6F4" stroke="#574FE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+									<path d="M4.31283 21.0832C5.63601 21.0832 6.70866 20.0105 6.70866 18.6873C6.70866 17.3642 5.63601 16.2915 4.31283 16.2915C2.98964 16.2915 1.91699 17.3642 1.91699 18.6873C1.91699 20.0105 2.98964 21.0832 4.31283 21.0832Z" fill="#E7E6F4" stroke="#574FE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 									<path d="M6.70866 1.9165H1.91699V6.70817H6.70866V1.9165Z" fill="#E7E6F4" stroke="#574FE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 									<path d="M21.0837 16.2915H16.292V21.0832H21.0837V16.2915Z" fill="#E7E6F4" stroke="#574FE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 									<path d="M16.2913 4.3125H6.70801" stroke="#574FE4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -87,7 +87,7 @@ export default function NexusPage() {
 			
 			<motion.div 
 				initial={{ opacity:0.5}}
-				whileInView={{ opacity:1}}
+				animate={{ opacity:1}}
 				transition={{duration:1, delay:0.2}}
 				className="w-[100%]">
 				<Image
@@ -99,7 +99,7 @@ export default function NexusPage() {
 
 			<motion.div 
 				initial={{ opacity:0.5}}
-				whileInView={{ opacity:1}}
+				animate={{ opacity:1}}
 				transition={{duration:1, delay:0.2}}
 				className="w-[100%]">
 				<Image
@@ -109,14 +109,14 @@ export default function NexusPage() {
 				/>
 			</motion.div>
 
-			<div className="flex bg-[#0B0B0B] relative w-full overflow-hidden flex-row">
+			<div className="flex bg-[#0B0B0B] sm:flex-row flex-col relative w-full overflow-hidden ">
 				<motion.div 
 					initial={{ opacity:0.5}}
-					whileInView={{ opacity:1}}
+					animate={{ opacity:1}}
 					transition={{duration:1, delay:0.2}}
 					className=" z-2">
 					<Image
-						className="w-[64vw] h-[calc(64vw*(921/934))] z-2"
+						className="sm:w-[64vw] w-full sm:h-[calc(64vw*(921/934))] z-2"
 						src={nxs1_2}
 						alt="nxs1"
 					/>
@@ -124,19 +124,20 @@ export default function NexusPage() {
 
 				<motion.div 
 					initial={{ opacity:0.5}}
-					whileInView={{ opacity:1}}
+					animate={{ opacity:1}}
 					transition={{duration:1, delay:0.6}}
 					className=" z-2">
 					<Image
-						className="absolute z-1 w-[36vw] h-[calc(64vw*(921/934))] right-0"
+						className="sm:absolute z-1 w-full sm:w-[36vw] sm:h-[calc(64vw*(921/934))] right-0"
 						src={nxs2_2}
 						alt="nxs3"
 					/>
 				</motion.div>
 			</div>
+
 			<motion.div 
 					initial={{ opacity:0.5}}
-					whileInView={{ opacity:1}}
+					animate={{ opacity:1}}
 					transition={{duration:1, delay:0.6}}
 					className=" z-2">
 					<Image
@@ -147,10 +148,10 @@ export default function NexusPage() {
 			</motion.div>
 
 			<section className="bg-[#0B0B0B] pb-10 w-full">
-				<div className="flex flex-row">
-					<div className="flex-1 relative">
+				<div className="flex sm:flex-row flex-col">
+					<div className="flex-1 relative w-full h-100">
 						<Image
-							className="w-[100%] z-1 absolute"
+							className="w-[100%] z-1"
 							src={textura}
 							alt="textura"
 						/>
@@ -162,9 +163,9 @@ export default function NexusPage() {
 
 						<motion.div 
 							initial={{ opacity:0.2, x:-100}}
-							whileInView={{ opacity:1, x:0}}
+							animate={{ opacity:1, x:0}}
 							transition={{duration:1.5, delay:0.6, type:'spring'}}
-							className="w-[75%] absolute z-3 bottom-[-13%]">
+							className="w-[75%] top-0 absolute z-3">
 							<Image
 								
 								src={phone}
@@ -175,9 +176,9 @@ export default function NexusPage() {
 
 					<motion.div 
 						initial={{ opacity:0.5}}
-						whileInView={{ opacity:1}}
+						animate={{ opacity:1}}
 						transition={{duration:1, delay:0.6}}
-						className="w-[45%]">
+						className="sm:w-[45%] w-full">
 						<Image
 							
 							src={logos}
@@ -189,7 +190,7 @@ export default function NexusPage() {
 				<div className="bg-[#0B0B0B] flex-col flex items-center justify-center py-[5vw] w-full">
 					<motion.div 
 						initial={{ opacity:0.5}}
-						whileInView={{ opacity:1}}
+						animate={{ opacity:1}}
 						transition={{duration:1, delay:0.6}}
 						className="w-[80%]">
 						<Image

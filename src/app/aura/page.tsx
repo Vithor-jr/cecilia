@@ -26,7 +26,7 @@ export default function AuraPage() {
 	}
 
 	return (
-		<div className="flex bg-[#F0F0F0] flex-col items-center justify-center  pt-20">
+		<div className="flex border-0 bg bg-[#F0F0F0] flex-col items-center justify-center  pt-20">
 			<div className="w-[90vw] max-w-[1000px] pb-10  gap-4">
 				<Header
 					title="Âura"
@@ -86,7 +86,7 @@ export default function AuraPage() {
 
 			<motion.div 
 				initial={{ opacity:0.5}}
-				whileInView={{ opacity:1}}
+				animate={{ opacity:1}}
 				transition={{duration:1, delay:0.2}}
 				className="w-[100%]">
 				<Image
@@ -98,7 +98,7 @@ export default function AuraPage() {
 
 			<motion.div 
 				initial={{ opacity:0.5}}
-				whileInView={{ opacity:1}}
+				animate={{ opacity:1}}
 				transition={{duration:1, delay:0.2}}
 				className="w-[100%]">
 				<Image
@@ -110,7 +110,7 @@ export default function AuraPage() {
 
 			<motion.div 
 					initial={{ opacity:0.5}}
-					whileInView={{ opacity:1}}
+					animate={{ opacity:1}}
 					transition={{duration:1, delay:0.6}}
 					className=" z-2">
 					<Image
@@ -120,14 +120,14 @@ export default function AuraPage() {
 					/>
 			</motion.div>
 
-			<div className="flex bg-[#0B0B0B] relative w-full overflow-hidden flex-row">
+			<div className="flex bg-[#0B0B0B] relative w-full overflow-hidden flex-col sm:flex-row">
 				<motion.div 
 					initial={{ opacity:0.5}}
-					whileInView={{ opacity:1}}
+					animate={{ opacity:1}}
 					transition={{duration:1, delay:0.2}}
 					className=" z-2">
 					<Image
-						className="w-[calc(100vw*(792/1440))] h-[calc(100vw*(581/1440))] z-2"
+						className="sm:w-[calc(100vw*(792/1440))] w-full sm:h-[calc(100vw*(581/1440))] z-2"
 						src={aura2_1}
 						alt="nxs1"
 					/>
@@ -136,11 +136,11 @@ export default function AuraPage() {
 
 				<motion.div 
 					initial={{ opacity:0.5}}
-					whileInView={{ opacity:1}}
+					animate={{ opacity:1}}
 					transition={{duration:1, delay:0.6}}
 					className=" z-2">
 					<Image
-						className="absolute z-1 w-[calc(100vw*(649/1440))] h-[calc(100vw*(581/1440))] right-0"
+						className="sm:absolute h-full z-1 sm:w-[calc(100vw*(649/1440))] sm:h-[calc(100vw*(581/1440))] right-0"
 						src={aura2_2}
 						alt="nxs3"
 					/>
@@ -149,7 +149,7 @@ export default function AuraPage() {
 			
 			<motion.div 
 				initial={{ opacity:0.5}}
-				whileInView={{ opacity:1}}
+				animate={{ opacity:1}}
 				transition={{duration:1, delay:0.2}}
 				className="w-[100%]">
 				<Image
@@ -161,7 +161,7 @@ export default function AuraPage() {
 
 			<motion.div 
 				initial={{ opacity:0.5}}
-				whileInView={{ opacity:1}}
+				animate={{ opacity:1}}
 				transition={{duration:1, delay:0.2}}
 				className="w-[100%]">
 				<Image
@@ -171,8 +171,8 @@ export default function AuraPage() {
 				/>
 			</motion.div>
 		
-		<div className="w-[90vw] max-w-[1000px] flex flex-col items-center pb-10  gap-4">
-			<div className="flex mt-10 flex-col  mb-5  md:flex-row w-full flex-wrap gap-5">
+	 		<div className="w-[90vw] max-w-[1000px]  mb-5 flex flex-col items-center pb-10  gap-4">
+			  <div className="flex mt-10 flex-col   md:flex-row w-full flex-wrap gap-5">
 					<Section
 						title="Resultado"
 						Icon={() => (
@@ -196,7 +196,7 @@ export default function AuraPage() {
 					/>
 				</div>
 
-				<a onClick={()=>scrollToTop()} className={`${inter.className} bg-[#574FE4] text-[white] font-bold px-12 rounded-[6px] py-2 md:text-[20px] mt-5 text-[16px]`}>
+				<a onClick={()=>scrollToTop()} className={`${inter.className} bg-[#574FE4] text-[white] font-bold cursor-pointer px-12 rounded-[6px] py-2 md:text-[20px] mt-5 text-[16px]`}>
 					Voltar ao topo
 				</a>
 			</div>
