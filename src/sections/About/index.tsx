@@ -11,8 +11,8 @@ import ExperienceSection from "../Experience"
 
 export default function AboutSection() {
   return (
-    <section id="sobre" className="text-[#F0F0F0] flex flex-col items-center">
-      <div className="flex pt-20 max-w-[1440px] px-10 gap-y-10 flex-row items-center  gap-x-[8vw] justify-center">
+    <section id="sobre" className="text-[#F0F0F0]  flex flex-col items-center">
+      <div className="flex  pt-20 max-w-[1440px] px-10 gap-y-10 flex-col lg:flex-row items-center gap-x-[8vw] justify-center">
         <div className={`${inter.className} w-[clamp(0px,100%,530px)] font-light `}>
           <h1 className="font-bold text-[clamp(40px,10vw,64px)]">Sobre mim</h1>
           <p className="text-[clamp(14px,10vw,16px)] mt-4">Olá, me chamo cecília e desde cedo, encontrei na arte uma forma de me entender e me expressar. O design entrou na minha vida como um caminho para transformar essa sensibilidade em algo funcional, ideias que ganham forma e impacto.</p>
@@ -22,7 +22,7 @@ export default function AboutSection() {
 
           <div className="flex flex-row mt-10 flex-wrap gap-4">
             <a className={`flex flex-row gap-2 items-center px-6 py-2 font-semibold text-[14px] rounded-4xl text-[#574FE4] bg-[#D5D3FF]`}>
-             <div className="rounded-full bg-[#574FE4] w-6 h-6 flex items-center justify-center">
+              <div className="rounded-full bg-[#574FE4] w-6 h-6 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path fillRule="evenodd" clipRule="evenodd" d="M14 14H11.2V9.10068C11.2 7.75668 10.6071 7.00684 9.5438 7.00684C8.3867 7.00684 7.7 7.78818 7.7 9.10068V14H4.9V4.9H7.7V5.92334C7.7 5.92334 8.57849 4.38184 10.5581 4.38184C12.5384 4.38184 14 5.59027 14 8.09067V14ZM1.7094 3.44463C0.765101 3.44463 0 2.67327 0 1.72197C0 0.771373 0.765101 0 1.7094 0C2.653 0 3.4181 0.771373 3.4181 1.72197C3.4188 2.67327 2.653 3.44463 1.7094 3.44463ZM0 14H3.5V4.9H0V14Z" fill="#D5D3FF"/>
                 </svg>
@@ -52,18 +52,28 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="relative flex md:flex-row flex-col items-center">
+       <div className="relative flex items-center">
 
           <Image
             src={ceciliaMain}
             alt="ceci"
-            className="h-max-[641px] w-[clamp(0px,100%,514px)] md:mb-0 mb-10"
+            className="w-[clamp(260px,100%,514px)] h-auto"
           />
 
-          <p className="w-[clamp(150px,25vw,250px)] md:mt-0 mt-5 md:-rotate-10 -left-20 top-30 rounded-full flex justify-center py-5 md:absolute bg-[#92D1E0] text-[#1D8198] font-semibold text-[14px]">Web designer</p>
-          <p className="w-[250px] md:mt-0 mt-5 md:rotate-5 -left-20 bottom-20 rounded-full flex justify-center py-5 md:absolute bg-[#EBC09C] text-[#C35C08] font-semibold text-[14px]">Brand designer</p>
-          <p className="w-[250px] md:mt-0 mt-5 md:-rotate-5 -right-10 -bottom-5 rounded-full flex justify-center py-5 md:absolute bg-[#9FDE8D] text-[#49830A] font-semibold text-[14px]">UX/UI designer</p>
-        </div>
+          <p className="absolute left-[-20%] top-[18%] w-[clamp(100px,50%,250px)] -rotate-10 rounded-full flex justify-center py-4 bg-[#92D1E0] text-[#1D8198] font-semibold text-[clamp(12px,1.2vw,14px)]">
+            Web designer
+          </p>
+
+          <p className="absolute left-[-15%] bottom-[10%] w-[clamp(100px,50%,250px)] rotate-5 rounded-full flex justify-center py-4 bg-[#EBC09C] text-[#C35C08] font-semibold text-[clamp(12px,1.2vw,14px)]">
+            Brand designer
+          </p>
+
+          <p className="absolute right-[-6%] bottom-[-5%] w-[clamp(100px,50%,250px)] -rotate-5 rounded-full flex justify-center py-4 bg-[#9FDE8D] text-[#49830A] font-semibold text-[clamp(12px,1.2vw,14px)]">
+            UX/UI designer
+          </p>
+
+      </div>
+
       </div>
 
       <div className={`font-semibold mt-16 w-full text-[13px] gap-x-10 overflow-hidden flex items-center justify-around bg-[#574FE4] -rotate-2 py-2`}>
