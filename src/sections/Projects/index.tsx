@@ -11,6 +11,9 @@ import nexus from "../../../public/cards/nexus_card.png"
 import aura from "../../../public/cards/aura_card.png"
 import magnnuz from "../../../public/cards/magnnuz_card.png"
 import veeg from "../../../public/cards/veeg_card.png"
+import fiocafe from "../../../public/cards/fiocafe.svg"
+import verame from "../../../public/cards/verame.png"
+import nomad from '../../../public/cards/nomad.svg'
 
 import studus from "../../../public/cards/studus_card.png"
 import nexus_UI from "../../../public/cards/card_nexus.png"
@@ -25,7 +28,8 @@ const cards = [
     tec: ["figma", "ai", "photoshop"]
   },
   { 
-    title: "Âura", type: "Identidade Visual",
+    title: "Âura", 
+    type: "Identidade Visual",
     desc: "Uma marca de bem-estar que integra pilates, estética e autocuidado para mulheres em busca de equilíbrio.",
     img: aura,
     href:"/aura",
@@ -47,7 +51,30 @@ const cards = [
     href:"/veeg",
     tec: ["figma", "ai", "photoshop"]
   },
-
+  { 
+    title: "Fio café", 
+    type: "Identidade Visual",
+    desc: "Uma cafeteria de cafés especiais com atmosfera tranquila e instagramável.",
+    img: fiocafe,
+    href:"/fiocafe",
+    tec: ["ai", "photoshop"]
+  },
+   { 
+    title: "Vérame", 
+    type: "Identidade Visual",
+    desc: "Restaurante noturno contemporâne0 com atmosfera intimista, estética refinada e experiência sensorial completa.",
+    img: verame,
+    href:"/verame",
+    tec: ["ai", "photoshop"]
+  },
+  { 
+    title: "Nomad Studio", 
+    type: "Identidade Visual",
+    desc: "Identidade visual para ateliê de mobiliário artesanal",
+    img: nomad,
+    href:"/nomadstudio",
+    tec: ["ai", "photoshop"]
+  },
   { 
     title: "Nexus", 
     type: "UX / UI Design", 
