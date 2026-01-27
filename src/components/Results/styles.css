@@ -11,3 +11,9 @@
 .animate-scroll {
 	animation: scroll 30s linear infinite;
 }
+
+@media(max-width:600px){
+	.animate-scroll {
+		animation: scroll 60s linear infinite;
+	}
+}

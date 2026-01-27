@@ -51,8 +51,8 @@ export default function Result() {
   return (
     <div className='container my-16 flex items-center flex-col relative'>
         <div className="flex items-center relative flex-col">
-          <p className={`${inter.className} text-[48px] font-bold`}>Excelência que Gera</p>
-          <p className={`${inter.className} text-[48px] font-bold -mt-5`}>Resultados</p>
+          <p className={`${inter.className} text-[clamp(38px,3vw,48px)] text-center px-10 leading-[clamp(36px,2.8vw,46px)] font-bold`}>Excelência que Gera</p>
+          <p className={`${inter.className} text-[clamp(38px,3vw,48px)] font-bold -mt-[2%]`}>Resultados</p>
 
           <svg className="absolute -left-25 top-4" xmlns="http://www.w3.org/2000/svg" width="192" height="148" viewBox="0 0 192 148" fill="none">
             <path d="M17.0173 134.353C5.94475 122.593 0 109.403 0 88.021C0 50.396 26.4127 16.6733 64.8225 0L74.4223 14.8135C38.571 34.2065 31.562 59.3722 28.767 75.2392C34.5398 72.2507 42.097 71.208 49.5037 71.896C68.8967 73.6912 84.1833 89.612 84.1833 109.403C84.1833 119.382 80.2192 128.952 73.1631 136.008C66.1071 143.064 56.537 147.028 46.5582 147.028C35.0235 147.028 23.994 141.76 17.0173 134.353ZM124.517 134.353C113.445 122.593 107.5 109.403 107.5 88.021C107.5 50.396 133.913 16.6733 172.323 0L181.922 14.8135C146.071 34.2065 139.062 59.3722 136.267 75.2392C142.04 72.2507 149.597 71.208 157.004 71.896C176.397 73.6912 191.683 89.612 191.683 109.403C191.683 119.382 187.719 128.952 180.663 136.008C173.607 143.064 164.037 147.028 154.058 147.028C142.523 147.028 131.494 141.76 124.517 134.353Z" fill="#574FE4" fillOpacity="0.3"/>

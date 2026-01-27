@@ -1,9 +1,6 @@
 'use client'
 
-import { inter } from "@/app/fonts"
-import { LettersAnimation } from "@/function/letters"
-import { motion } from "framer-motion"
-import { Inter } from "next/font/google"
+import { inter } from "@/app/fonts" 
 import { useState } from "react"
 import Projeto from "@/components/Projeto"
 
@@ -14,6 +11,7 @@ import veeg from "../../../public/cards/veeg_card.png"
 import fiocafe from "../../../public/cards/fiocafe.svg"
 import verame from "../../../public/cards/verame.png"
 import nomad from '../../../public/cards/nomad.svg'
+import vithor from '../../../public/cards/vithor_card.png'
 
 import studus from "../../../public/cards/studus_card.png"
 import nexus_UI from "../../../public/cards/card_nexus.png"
@@ -24,7 +22,7 @@ const cards = [
     type: "Identidade Visual", 
     desc: "Aplicativo de aprimoramento de softskills, através de IA e gamificação.", 
     img: nexus,
-    href:"/nexus",
+    href:"identidade-visual/nexus",
     tec: ["figma", "ai", "photoshop"]
   },
   { 
@@ -32,7 +30,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Uma marca de bem-estar que integra pilates, estética e autocuidado para mulheres em busca de equilíbrio.",
     img: aura,
-    href:"/aura",
+    href:"identidade-visual/aura",
     tec: ["ai", "photoshop"]
   },
   { 
@@ -40,7 +38,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Dispositivo interativo para aprendizado e prática do xadrez.",
     img: magnnuz,
-    href:"/magnnuz",
+    href:"identidade-visual/magnnuz",
     tec: ["figma", "ai", "photoshop"]
   },
   { 
@@ -48,7 +46,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Empresa de transporte de cargas secas com foco em confiança e profissionalismo.",
     img: veeg,
-    href:"/veeg",
+    href:"identidade-visual/veeg",
     tec: ["figma", "ai", "photoshop"]
   },
   { 
@@ -56,7 +54,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Uma cafeteria de cafés especiais com atmosfera tranquila e instagramável.",
     img: fiocafe,
-    href:"/fiocafe",
+    href:"identidade-visual/fiocafe",
     tec: ["ai", "photoshop"]
   },
    { 
@@ -64,7 +62,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Restaurante noturno contemporâne0 com atmosfera intimista, estética refinada e experiência sensorial completa.",
     img: verame,
-    href:"/verame",
+    href:"identidade-visual/verame",
     tec: ["ai", "photoshop"]
   },
   { 
@@ -72,7 +70,7 @@ const cards = [
     type: "Identidade Visual",
     desc: "Identidade visual para ateliê de mobiliário artesanal",
     img: nomad,
-    href:"/nomadstudio",
+    href:"identidade-visual/nomadstudio",
     tec: ["ai", "photoshop"]
   },
   { 
@@ -80,7 +78,7 @@ const cards = [
     type: "UX / UI Design", 
     desc: "Aplicativo de aprimoramento de softskills, através de IA e gamificação.", 
     img: nexus_UI,
-    href:"/nexus",
+    href:"ux-ui-design/nexus",
     tec: ["figma"]
   },
   {
@@ -88,7 +86,15 @@ const cards = [
     type: "UX / UI Design",
     desc: "Plataforma educacional que conecta estudantes a cursos online de diversas áreas do conhecimento.",
     img: studus,
-    href:"/nexus",
+    href:"ux-ui-design/studus",
+    tec: ["figma"]
+  },
+  {
+    title: "Vithor - landing page",
+    type: "UX / UI Design",
+    desc: "Landing page para programador full-stack, com foco em apresentar trajetória, tecnologias e projetos..",
+    img: vithor,
+    href:"ux-ui-design/vithor",
     tec: ["figma"]
   }
 ]
