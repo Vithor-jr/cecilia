@@ -11,12 +11,19 @@ export default function Header({title, type, description}: {title: string, type:
 		
 	useEffect(() => {
 		setHeaderActive(false)
-	}, [headerActive, setHeaderActive])
+	}, [])
 
 	return(
 		<header className="flex flex-col items-start">
 			<button
-					onClick={() => router.push('/#projetos')}
+					onClick={() => {
+						router.push('/')
+						setTimeout(() => {
+							document
+								.getElementById("projetos")
+								?.scrollIntoView({ behavior: "smooth" })
+						}, 100)
+						}}
 					className="cursor-pointer"
 				>
 				<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">

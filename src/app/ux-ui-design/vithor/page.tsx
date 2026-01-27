@@ -128,6 +128,7 @@ import porfolio from '../../../assets/vithor/portoflio.png'
 					<Image
 						src={porfolio}
 						alt="porfolio"
+						placeholder="blur"
 						className="sm:w-[80%] w-full"
 					/>
 				</div>

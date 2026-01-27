@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 type ActiveContextType = {
   active: string
@@ -13,10 +14,26 @@ const ActiveContext = createContext<ActiveContextType | null>(null)
 
 export function ActiveProvider({ children }: { children: React.ReactNode }) {
   const [active, setActive] = useState("home")
-  const [headerActive, setHeaderActive] = useState<boolean>(true)
+  const [headerActive, setHeaderActive] = useState(true)
+  const pathname = usePathname()
+
+  /* ==============================
+     RESET AO MUDAR DE ROTA
+  =============================== */
+  useEffect(() => {
+    if (pathname === "/") {
+      setHeaderActive(true)
+      setActive("home")
+    } else {
+      setHeaderActive(false)
+    }
+  }, [pathname])
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section")
+    if (!headerActive) return
+
+    const sections = document.querySelectorAll("section[id]")
+    if (!sections.length) return
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,15 +43,20 @@ export function ActiveProvider({ children }: { children: React.ReactNode }) {
           }
         })
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.2,
+      }
     )
 
     sections.forEach((section) => observer.observe(section))
-    return () => sections.forEach((section) => observer.unobserve(section))
-  }, [active])
+
+    return () => observer.disconnect()
+  }, [headerActive])
 
   return (
-    <ActiveContext.Provider value={{ active, setActive, headerActive, setHeaderActive }}>
+    <ActiveContext.Provider
+      value={{ active, setActive, headerActive, setHeaderActive }}
+    >
       {children}
     </ActiveContext.Provider>
   )

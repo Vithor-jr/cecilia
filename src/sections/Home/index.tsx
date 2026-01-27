@@ -23,9 +23,40 @@ export default function HomeSection() {
             className={`text-left ${inter.className} -mt-3 md:-mt-5 font-bold text-[clamp(50px,10vw,96px)]`}>
               Branding
           </motion.p>
-          <p className={`text-left -mt-4 md:-mt-12 ${inter.className} font-bold text-[clamp(50px,10vw,96px)]`}>& interface</p>
-          <p className={`text-left -mt-4 text-white md:-mt-12 ${inter.className} font-bold z-2 text-[clamp(50px,10vw,96px)]`}>designer</p>
-          <div className="bg-[#574FE4] absolute -left-2 bottom-3 -rotate-2 z-1 w-[clamp(230px,50vw,450px)] h-[clamp(50px,10vw,96px)] rounded-3xl"/>
+
+          <motion.p  
+            initial={{scale:0, opacity:0}}
+            animate={{scale:1, opacity:1}}
+            transition={{
+              type:"spring",
+              stiffness: 80, 
+              damping: 12, 
+              delay:0.4
+            }}  
+            className={`text-left -mt-4 md:-mt-12 ${inter.className} font-bold text-[clamp(50px,10vw,96px)]`}>& interface
+          </motion.p>
+          
+          <motion.p  
+            initial={{scale:0, opacity:0}}
+            animate={{scale:1, opacity:1}}
+            transition={{
+              type:"spring",
+              stiffness: 80, 
+              damping: 12, 
+              delay:0.6
+            }}  
+             className={`text-left -mt-4 text-white md:-mt-12 ${inter.className} font-bold z-2 text-[clamp(50px,10vw,96px)]`}>designer
+          </motion.p>
+
+          <motion.div
+            initial={{scale:0, opacity:0}}
+            animate={{scale:1, opacity:1}}
+            transition={{
+              type:"spring",
+              stiffness: 80, 
+              damping: 12, 
+              delay:0.6
+            }} className="bg-[#574FE4] absolute -left-2 bottom-3 -rotate-2 z-1 w-[clamp(230px,50vw,450px)] h-[clamp(50px,10vw,96px)] rounded-3xl"/>
       </div>
 
       <div className="mr-7">

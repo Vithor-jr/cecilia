@@ -139,13 +139,13 @@ export default function ProjectSection() {
         <p className={`${inter.className} font-semibold text-[#808080] text-[18px]`}>Explore por tipo de design</p>
       </div>
 
-      <div className="flex flex-wrap mt-5 flex-row gap-2 w-[70vw] max-w-[900px] justify-between">
+      <div className="flex mt-5 flex-row flex-wrap gap-2 justify-between">
         {
           tab.map((item, index) => (
             <button key={index}
               onClick={() => setActive(item.id)}
-              className={`min-w-[180px] cursor-pointer py-4 rounded-2xl flex-1
-                text-[16px] font-semibold
+              className={`w-[clamp(80px,20vw,200px)]  cursor-pointer py-4 rounded-2xl flex-1
+                text-[clamp(8px,2vw,16px)] font-semibold
                 ${active === item.id 
                   ? "text-[#FDFDFD] bg-[#574FE4]" 
                   : "text-[#574FE4] bg-[#E7E6F4]"
@@ -157,7 +157,8 @@ export default function ProjectSection() {
         }
       </div>
 
-      <div className="flex mt-10 flex-row flex-wrap max-w-[1400px] items-center justify-center">
+     <div className="flex justify-center w-full">
+       <div className="flex mt-10 md:flex-row gap-x-[2%] flex-col gap-y-4 flex-wrap max-w-[1200px]">
         {
           filteredCards.map((item, index) => (
             <Projeto
@@ -170,8 +171,9 @@ export default function ProjectSection() {
               img={item.img}
             />
           ))
-        }
-      </div>
+          }
+        </div>
+     </div>
     </section>
   )
 }

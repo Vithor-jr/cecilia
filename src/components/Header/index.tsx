@@ -5,6 +5,8 @@ import { poppins } from "@/app/fonts"
 import { useState } from "react"
 import Drawer from '@mui/material/Drawer';
 import { useActive } from "@/contexts/active_provider";
+import { scrollToSection } from "@/function/scroll";
+
 
 const links = [
     { id: "home", label: "Home", delay: 1.6 },
@@ -17,6 +19,15 @@ const links = [
 export default function Header() {
 	const [menuShown, setMenuShown] = useState(false)
 	const { active, setActive, headerActive } = useActive()
+
+
+	const handleClick = (id: string) => {
+		if (!headerActive) return
+		setActive(id)
+		scrollToSection(id)
+		setMenuShown(false)
+	}
+
 	return (
 		<div className="w-full bg-[#F0F0F0] justify-center flex fixed z-99">
 			<header className="w-full  max-w-[1440px] flex flex-row py-5 pr-10 pl-10 justify-between items-center">
@@ -112,98 +123,94 @@ export default function Header() {
 					</g>
 				</svg>
 
-				<nav className={`${poppins.className} max-[800px]:hidden text-[14px] font-medium flex flex-row gap-10`}>
-					 {links.map((link) => (
-						<motion.a
-							key={link.id}
-							initial={{ y: -100 }}
-							animate={{ y: 0 }}
-							transition={{
-								type: "spring",
-								stiffness: 80,
-								damping: 12,
-								delay: link.delay,
-							}}
-							href={headerActive ? `#${link.id}` : undefined}
-							onClick={() => {
-								if(headerActive) {
-									setActive(link.id)
-								}
-							}}
-							className={
-								active === link.id
-									? "text-[#574FE4] relative"
-									: "text-black hover:text-[#574FE4] relative"
-							}
-						>
-          {link.label}
+        <nav
+          className={`${poppins.className} max-[800px]:hidden text-[14px] font-medium flex gap-10`}
+        >
+          {links.map((link) => (
+            <motion.button
+              key={link.id}
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 80,
+                damping: 12,
+                delay: link.delay,
+              }}
+              onClick={() => handleClick(link.id)}
+              className={`relative cursor-pointer bg-transparent outline-none
+                ${active === link.id
+                  ? "text-[#574FE4]"
+                  : "text-black hover:text-[#574FE4]"
+                }`}
+            >
+              {link.label}
 
-          {active === link.id && (
-            <motion.div
-              layoutId="underline"
-              className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#574FE4] rounded-full"
-              transition={{ type: "spring", stiffness: 80, damping: 12 }}
-            />
-          )}
-        </motion.a>
-      ))}
-				</nav>
+              {active === link.id && (
+                <motion.div
+                  layoutId="underline"
+                  className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#574FE4] rounded-full"
+                  transition={{ type: "spring", stiffness: 80, damping: 12 }}
+                />
+              )}
+            </motion.button>
+          ))}
+        </nav>
 				
-				<button
-					onClick={()=>setMenuShown(true)}
-					className="cursor-pointer max-[800px]:flex hidden"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 56 51" fill="none">
-						<path d="M3 3H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round"/>
-						<path d="M3 16.9648H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round"/>
-						<path d="M3 32.4814H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round"/>
-						<path d="M3 48H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round"/>
-					</svg>
-				</button>
+				 <button
+          onClick={() => setMenuShown(true)}
+          className="cursor-pointer max-[800px]:flex hidden"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 56 51">
+            <path d="M3 3H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round" />
+            <path d="M3 16.9648H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round" />
+            <path d="M3 32.4814H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round" />
+            <path d="M3 48H53" stroke="#574FE4" strokeWidth="6" strokeLinecap="round" />
+          </svg>
+        </button>
 
-				<motion.button 
-					initial={{y:-100}}
-						animate={{y:0}}
-						transition={{
-							type: "spring",
-							stiffness: 80, 
-							damping: 12, 
-							delay: 2.6			
-						}} 
-					className="bg-[#574FE4] max-[800px]:hidden cursor-pointer flex gap-2 flex-row items-center pl-5 pr-5 pt-2 pb-2 rounded-2xl">
-						<p className={`${poppins.className} text-white text-[14px]`}>Ver projetos</p>
-						<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-							<path d="M0.292893 9.29289C-0.0976311 9.68342 -0.0976311 10.3166 0.292893 10.7071C0.683418 11.0976 1.31658 11.0976 1.70711 10.7071L1 10L0.292893 9.29289ZM11 1C11 0.447715 10.5523 -3.74211e-07 10 4.72575e-08L1 -1.63477e-07C0.447715 -1.63477e-07 2.8711e-07 0.447715 2.8711e-07 1C2.8711e-07 1.55228 0.447715 2 1 2L9 2L9 10C9 10.5523 9.44772 11 10 11C10.5523 11 11 10.5523 11 10L11 1ZM1 10L1.70711 10.7071L10.7071 1.70711L10 1L9.29289 0.292893L0.292893 9.29289L1 10Z" fill="white"/>
-						</svg>
-				</motion.button>
+        <motion.button
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 12,
+            delay: 2.6,
+          }}
+          onClick={() => handleClick("projetos")}
+          className="bg-[#574FE4] max-[800px]:hidden flex items-center gap-2 px-5 py-2 rounded-2xl cursor-pointer"
+        >
+          <p className={`${poppins.className} text-white text-[14px]`}>
+            Ver projetos
+          </p>
+        </motion.button>
+ 
 			</header>
 			
-			<Drawer
+		 <Drawer
         anchor="left"
         open={menuShown}
-				className="max-[800px]:flex hidden"
         onClose={() => setMenuShown(false)}
-      >	 
-			
-				<div className={`max-w-[250px] w-[80vw] flex flex-col gap-5 pt-10 pl-10 pr-10 ${poppins.className}`}>
-					{links.map((link) => (
-						<a 
-							key={link.id}
-							className={
-								active === link.id
-									? "text-[#574FE4] relative"
-									: "text-black hover:text-[#574FE4] relative"
-							}
-							href={`#${link.id}`}
-							onClick={() => {
-								if(headerActive) {
-									setActive(link.id)
-								}
-							}}
-							>{link.label}</a>
-
-					))}
-				</div>
+        className="max-[800px]:flex hidden"
+      >
+        <div
+          className={`${poppins.className} w-[80vw] max-w-[250px] flex flex-col gap-5 pt-10 px-10`}
+        >
+          {links.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => handleClick(link.id)}
+              className={`text-left cursor-pointer bg-transparent
+                ${active === link.id
+                  ? "text-[#574FE4]"
+                  : "text-black hover:text-[#574FE4]"
+                }`}
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
       </Drawer>
 		</div>
 )}

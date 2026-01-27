@@ -103,7 +103,7 @@ export default function Footer() {
 				<h1 className={`${montserrat.className} font-bold text-[18px]`}>Links Rápidos</h1>
 				<a href="#home"  className={`${poppins.className} text-[13px] font-light cursor-pointer`}>Home</a>
 				<a href="#sobre" className={`${poppins.className} text-[13px] font-light cursor-pointer`}>Sobre</a>
-				<a href="#experiencia" className={`${poppins.className} text-[13px] font-light cursor-pointer`}>Serviços</a>
+				<a href="#servicos" className={`${poppins.className} text-[13px] font-light cursor-pointer`}>Serviços</a>
 				<a href="#projetos" className={`${poppins.className} text-[13px] font-light cursor-pointer`}>Projetos</a>
 				<a href="#contato" className={`${poppins.className} text-[13px] font-light cursor-pointer`}>Contato</a>
 			</div>

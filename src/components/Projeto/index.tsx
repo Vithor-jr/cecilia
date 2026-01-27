@@ -19,7 +19,7 @@ import Link from "next/link"
 
 export default function Projeto({title, type, desc, img, tec, href}: cards) {
 	return (
-		<div className="max-w-[607px] h-full shadow-lg rounded-2xl pb-10 mb-5 mx-2 bg-[#F6F6F6] flex flex-col">
+		<div className="max-w-[590px] w-full md:w-[49%] shadow-lg rounded-2xl pb-10 bg-[#F6F6F6] flex flex-col">
 			<Image 
 				className="w-full"
 				src={img} 
