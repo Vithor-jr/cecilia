@@ -34,19 +34,23 @@ export default function Header({title, type, description}: {title: string, type:
 			<div className="flex flex-wrap flex-col sm:gap-5 sm:flex-row sm:items-center items-start">
 				<h1 className={`${inter.className} text-[40px] md:text-[60px] font-bold`}>{title}</h1>
 			  {
-					type == "Identidade Visual" ?
+					
+					title == "VEEG" ? 
+						<div className="flex flex-row flex-wrap gap-2">
+							<p className={`${inter.className} text-[#1D8198] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#92D1E0]`}>{type}</p>
+							<p className={`${inter.className} text-[#1D8198] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#92D1E0]`}>Primeiro projeto</p>
+						</div>
+					: type == "Identidade Visual" ?
 					<p className={`${inter.className} text-[#1D8198] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#92D1E0]`}>{type}</p> :
 					type == "Lading page" ?
-					<div className="flex flex-row gap-2">
+					<div className="flex flex-row flex-wrap gap-2">
 						<p className={`${inter.className} text-[#C35C08] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#EBC09C]`}>UX/UI</p>
 						<p className={`${inter.className} text-[#C35C08] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#EBC09C]`}>{type}</p>
 					</div>
 						:
 					<p className={`${inter.className} text-[#C35C08] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#EBC09C]`}>{type}</p>
 				}
-				{
-					title == "VEEG" && <p className={`${inter.className} text-[#1D8198] font-semibold text-[12px] md:text-[14px] rounded-2xl px-7 py-2 bg-[#92D1E0]`}>Primeiro projeto</p>
-				}
+				
 			</div>
 			<p className={`${inter.className} text-[15px] md:text-[25px] font-medium text-[#828282] `}>{description}</p>
 		</header>

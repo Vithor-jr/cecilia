@@ -12,7 +12,7 @@ export default function ContactSection() {
     <section id="contato" className={`${poppins.className} pb-10 px-5 relative w-full flex-col text-black flex items-center`}>
       <div className="z-1 w-full  flex flex-col mt-22 items-center gap-5">
         <h1 className={` ${inter.className} mt-5 text-[45px] text-white text-center font-bold`}>Pronto para dar o 
-          <span className="bg-white rounded-3xl ml-2 text-[#574FE4]">próximo passo?</span>
+          <span className="bg-white rounded-3xl ml-2 text-[#574FE4] px-2">próximo passo?</span>
         </h1>
 
         <h2 className={`${inter.className} w-full max-w-[1046px] text-[32px] text-white text-center`}>Fale diretamente comigo no WhatsApp e vamos transformar sua ideia em um projeto digital de alto impacto.</h2>

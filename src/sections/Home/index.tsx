@@ -61,7 +61,7 @@ export default function HomeSection() {
 
       <div className="mr-7">
         <p className={`${inter.className} max-w-[330px] leading-[32px] text-[30px] font-bold`}>Um bom design deve ser sentido.</p>
-        <p className={`${inter.className} font-semibold text-[22px] text-[#A2A2A2]`}>e oque é sentido, permanece</p>
+        <p className={`${inter.className} font-semibold text-[22px] text-[#A2A2A2]`}>e o que é sentido, permanece</p>
 
         <div className="flex mt-3 flex-row items-center gap-5">
           <Image
