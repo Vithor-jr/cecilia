@@ -28,7 +28,7 @@ const formation = [
 const prof = [
   {
 		title: "Canindé - Empresa júnior",
-		date: "2025 | atual",
+		date: "2025 | 2026",
 		prof: "Design e marketing",
 		labels: "Design ✦ Ambientes ✦ Marketing ✦ Produto ✦ Gráfico"
 	},
